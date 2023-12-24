@@ -75,7 +75,7 @@ def run():
 
     caption_choice = st.selectbox("Select your type of captions:", ("srt", "webvtt"))
 
-    url = st.text_input("YouTube URL", "https://www.youtube.com/watch?v=MPmx09S4cLw")
+    url = st.text_input("YouTube URL", "https://www.youtube.com/watch?v=IRNOoOYVn80")
     speakers = st.checkbox("Add speakers")
     video_options = st.session_state.video_options
 
@@ -89,7 +89,7 @@ def run():
             st.session_state.url = url
             get_captions(url)
         else:
-            st.warning("Please enter a valid YouTube URL in the expected format: `https://www.youtube.com/watch?v=MPmx09S4cLw`")
+            st.warning("Please enter a valid YouTube URL in the expected format: `https://www.youtube.com/watch?v=IRNOoOYVn80`")
 
     event = st_player(url, **video_options, key="youtube_player")
 
